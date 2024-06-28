@@ -1,12 +1,14 @@
 import React from "react";
-import Navbar from "../component/Navbar";
-import Hero from "../component/Hero";
-import Featured from "../component/Featured";
-import Experience from "../component/Experience";
-import Quality from "../component/Quality";
-import Ourlatest from "../component/Ourlatest";
-import Customer from "../component/Customer";
-import Accordion from "../component/Accordion";
+import Navbar from "../component/Home/Navbar";
+import Hero from "../component/Home/Hero";
+import Featured from "../component/Home/Featured";
+import Experience from "../component/Home/Experience";
+import Quality from "../component/Home/Quality";
+import Ourlatest from "../component/Home/Ourlatest";
+import Customer from "../component/Home/Customer";
+import Accordion from "../component/Home/Accordion";
+import Getintouch from "../component/Home/Getintouch";
+import Footer from "../component/Home/Footer";
 
 const Home = () => {
   return (
@@ -19,6 +21,8 @@ const Home = () => {
       <Ourlatest />
       <Customer />
       <Accordion />
+      <Getintouch />
+      <Footer />
     </>
   );
 };
