@@ -5,6 +5,8 @@ import Featured from "../component/Featured";
 import Experience from "../component/Experience";
 import Quality from "../component/Quality";
 import Ourlatest from "../component/Ourlatest";
+import Customer from "../component/Customer";
+import Accordion from "../component/Accordion";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <Experience />
       <Quality />
       <Ourlatest />
+      <Customer />
+      <Accordion />
     </>
   );
 };
