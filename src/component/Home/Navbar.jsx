@@ -1,9 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/Logo.png";
 import cart from "../../assets/cart.png";
 import heart from "../../assets/heart.png";
 import search from "../../assets/search.png";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -13,24 +13,41 @@ const Navbar = () => {
           <img src={logo} alt="Logo" className="ml-4" />
           <ol className="flex gap-5 ml-9 text-[#df9449] font-playfair list-none">
             <li>
-              <Link to="/" className="hover:underline">
+              <NavLink
+                exact
+                to="/"
+                className="hover:underline"
+                activeClassName="font-semibold"
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/about" className="hover:underline">
+              <NavLink
+                to="/about"
+                className="hover:underline"
+                activeClassName="font-semibold"
+              >
                 About
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/product" className="hover:underline">
+              <NavLink
+                to="/product"
+                className="hover:underline"
+                activeClassName="font-semibold"
+              >
                 Product
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/contact" className="hover:underline">
+              <NavLink
+                to="/contact"
+                className="hover:underline"
+                activeClassName="font-semibold"
+              >
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ol>
         </div>
