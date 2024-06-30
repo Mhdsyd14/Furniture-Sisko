@@ -10,12 +10,15 @@ import Accordion from "../component/Home/Accordion";
 import Getintouch from "../component/Home/Getintouch";
 import Footer from "../component/Home/Footer";
 
+import data from "../data.json";
+
 const Home = () => {
+  console.log(data);
   return (
     <>
       <Navbar />
       <Hero />
-      <Featured />
+      <Featured items={data} />
       <Experience />
       <Quality />
       <Ourlatest />

@@ -14,10 +14,11 @@ const Navbar = () => {
           <ol className="flex gap-5 ml-9 text-[#df9449] font-playfair list-none">
             <li>
               <NavLink
-                exact
+                exact="true"
                 to="/"
-                className="hover:underline"
-                activeClassName="font-semibold"
+                className={({ isActive }) =>
+                  isActive ? "font-semibold hover:underline" : "hover:underline"
+                }
               >
                 Home
               </NavLink>
@@ -25,8 +26,9 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/about"
-                className="hover:underline"
-                activeClassName="font-semibold"
+                className={({ isActive }) =>
+                  isActive ? "font-semibold hover:underline" : "hover:underline"
+                }
               >
                 About
               </NavLink>
@@ -34,8 +36,9 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/product"
-                className="hover:underline"
-                activeClassName="font-semibold"
+                className={({ isActive }) =>
+                  isActive ? "font-semibold hover:underline" : "hover:underline"
+                }
               >
                 Product
               </NavLink>
@@ -43,8 +46,9 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/contact"
-                className="hover:underline"
-                activeClassName="font-semibold"
+                className={({ isActive }) =>
+                  isActive ? "font-semibold hover:underline" : "hover:underline"
+                }
               >
                 Contact
               </NavLink>

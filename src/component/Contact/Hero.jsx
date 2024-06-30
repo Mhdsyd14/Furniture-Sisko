@@ -1,5 +1,5 @@
 import React from "react";
-import Heroproduct from "../../assets/Heroproduct.png";
+import Herocontact from "../../assets/Herocontact.png";
 import { ChevronRightIcon } from "@heroicons/react/16/solid";
 import { Link } from "react-router-dom";
 const Hero = () => {
@@ -8,9 +8,9 @@ const Hero = () => {
       <div
         className=" h-[425px] flex flex-col"
         style={{
-          backgroundImage: `url(${Heroproduct})`,
+          backgroundImage: `url(${Herocontact})`,
           backgroundSize: "cover",
-          backgroundPosition: "0px -200px ",
+          backgroundPosition: "0px -250px ",
           backgroundRepeat: "no-repeat",
         }}
       >
