@@ -11,7 +11,7 @@ import halaman4 from "../../assets/halaman4.png";
 import star from "../../assets/star.png";
 import shipping from "../../assets/shipping.png";
 
-const Detail = () => {
+const Detail = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [isLoved, setIsLoved] = useState(false);
@@ -38,19 +38,47 @@ const Detail = () => {
         : "bg-[#CCC4B4] text-[#642C0C]"
     }`;
 
+  if (!product) {
+    return (
+      <div className="p-7">
+        <div
+          className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+          role="alert"
+        >
+          <span className="block sm:inline"> Produk tidak ditemukan.</span>
+          <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
+            <svg
+              className="fill-current h-6 w-6 text-red-500"
+              role="button"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <title>Close</title>
+              <path d="M14.348 5.652a.5.5 0 00-.707 0L10 9.293 6.36 5.652a.5.5 0 10-.707.707L9.293 10l-3.64 3.641a.5.5 0 00.707.707L10 10.707l3.641 3.64a.5.5 0 00.707-.707L10.707 10l3.641-3.641a.5.5 0 000-.707z" />
+            </svg>
+          </span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="flex flex-row p-9">
         <div className="w-[650px] ml-5">
           <div className="grid grid-cols-3 grid-rows-5 gap-4">
             <div className="col-span-3 row-span-3">
-              <img src={halaman1} alt="halaman1" />
+              <img
+                src={product.image}
+                className="w-full h-[390px] object-fill"
+                alt="halaman1"
+              />
             </div>
             <div className="row-span-2 row-start-4">
               <img src={halaman2} alt="halaman2" />
             </div>
             <div className="row-span-2 row-start-4">
-              <img src={halaman3} alt="halaman3" />
+              <img src={halaman3} className=" h-[111px]" alt="halaman3" />
             </div>
             <div className="row-span-2 row-start-4">
               <img src={halaman4} alt="halaman4" />
@@ -58,8 +86,12 @@ const Detail = () => {
           </div>
         </div>
         <div className="w-[650px] ml-5 text-[#642C0C] flex flex-col">
-          <h1 className="text-5xl font-playfair font-semibold">Sofa</h1>
-          <h1 className="text-3xl font-semibold mt-3">Rp. 1.250.000</h1>
+          <h1 className="text-5xl font-playfair font-semibold">
+            {product.name}
+          </h1>
+          <h1 className="text-3xl font-semibold mt-3">
+            Rp. {product.price.toLocaleString()}
+          </h1>
           <div className="flex flex-row items-center">
             <img src={star} alt="bintang" className="mt-3" />
             <div className="h-5 w-0.5 bg-[#642C0C] mt-3" />

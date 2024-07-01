@@ -1,154 +1,32 @@
 import React from "react";
-import halaman1 from "../../assets/halaman1.png";
+import { Link } from "react-router-dom";
 
-const Card = () => {
+const Card = ({ items }) => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-7 mx-auto">
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src={halaman1}
-            alt="Modern Minimalist Sofa"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-[#311e0b]">
-              Modern Minimalist Sofa
-            </h3>
-            <p className="text-[#311e0b]">Elegan, Minimalis, Modern</p>
-            <p className="text-lg font-bold text-[#311e0b]">
-              Rp. 12.000.000.00
-            </p>
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src={halaman1}
-            alt="Modern Minimalist Sofa"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-[#311e0b]">
-              Modern Minimalist Sofa
-            </h3>
-            <p className="text-[#311e0b]">Elegan, Minimalis, Modern</p>
-            <p className="text-lg font-bold text-[#311e0b]">
-              Rp. 12.000.000.00
-            </p>
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src={halaman1}
-            alt="Modern Minimalist Sofa"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-[#311e0b]">
-              Modern Minimalist Sofa
-            </h3>
-            <p className="text-[#311e0b]">Elegan, Minimalis, Modern</p>
-            <p className="text-lg font-bold text-[#311e0b]">
-              Rp. 12.000.000.00
-            </p>
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src={halaman1}
-            alt="Modern Minimalist Sofa"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-[#311e0b]">
-              Modern Minimalist Sofa
-            </h3>
-            <p className="text-[#311e0b]">Elegan, Minimalis, Modern</p>
-            <p className="text-lg font-bold text-[#311e0b]">
-              Rp. 12.000.000.00
-            </p>
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src={halaman1}
-            alt="Modern Minimalist Sofa"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-[#311e0b]">
-              Modern Minimalist Sofa
-            </h3>
-            <p className="text-[#311e0b]">Elegan, Minimalis, Modern</p>
-            <p className="text-lg font-bold text-[#311e0b]">
-              Rp. 12.000.000.00
-            </p>
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src={halaman1}
-            alt="Modern Minimalist Sofa"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-[#311e0b]">
-              Modern Minimalist Sofa
-            </h3>
-            <p className="text-[#311e0b]">Elegan, Minimalis, Modern</p>
-            <p className="text-lg font-bold text-[#311e0b]">
-              Rp. 12.000.000.00
-            </p>
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src={halaman1}
-            alt="Modern Minimalist Sofa"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-[#311e0b]">
-              Modern Minimalist Sofa
-            </h3>
-            <p className="text-[#311e0b]">Elegan, Minimalis, Modern</p>
-            <p className="text-lg font-bold text-[#311e0b]">
-              Rp. 12.000.000.00
-            </p>
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src={halaman1}
-            alt="Modern Minimalist Sofa"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-[#311e0b]">
-              Modern Minimalist Sofa
-            </h3>
-            <p className="text-[#311e0b]">Elegan, Minimalis, Modern</p>
-            <p className="text-lg font-bold text-[#311e0b]">
-              Rp. 12.000.000.00
-            </p>
-          </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src={halaman1}
-            alt="Modern Minimalist Sofa"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-[#311e0b]">
-              Modern Minimalist Sofa
-            </h3>
-            <p className="text-[#311e0b]">Elegan, Minimalis, Modern</p>
-            <p className="text-lg font-bold text-[#311e0b]">
-              Rp. 12.000.000.00
-            </p>
-          </div>
-        </div>
+      <div className="grid grid-cols-3 gap-6 p-7 mx-auto">
+        {items.map((item) => (
+          <Link
+            to={{
+              pathname: `/product/${item.id}`,
+            }}
+            key={item.id}
+            className="bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-xl font-bold text-[#311e0b]">{item.name}</h3>
+              <p className="text-[#311e0b]">{item.description}</p>
+              <p className="text-lg font-bold text-[#311e0b]">
+                Rp. {item.price.toLocaleString()}
+              </p>
+            </div>
+          </Link>
+        ))}
       </div>
     </>
   );
