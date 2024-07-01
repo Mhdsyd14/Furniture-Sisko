@@ -17,7 +17,7 @@ const Navbar = () => {
                 exact="true"
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "font-semibold hover:underline" : "hover:underline"
+                  isActive ? " font-bold hover:underline" : "hover:underline"
                 }
               >
                 Home
@@ -27,7 +27,7 @@ const Navbar = () => {
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  isActive ? "font-semibold hover:underline" : "hover:underline"
+                  isActive ? " font-bold hover:underline" : "hover:underline"
                 }
               >
                 About
@@ -37,7 +37,7 @@ const Navbar = () => {
               <NavLink
                 to="/product"
                 className={({ isActive }) =>
-                  isActive ? "font-semibold hover:underline" : "hover:underline"
+                  isActive ? " font-bold hover:underline" : "hover:underline"
                 }
               >
                 Product
@@ -47,7 +47,7 @@ const Navbar = () => {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  isActive ? "font-semibold hover:underline" : "hover:underline"
+                  isActive ? " font-bold hover:underline" : "hover:underline"
                 }
               >
                 Contact
@@ -58,7 +58,9 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <img src={search} alt="Search" className="cursor-pointer" />
           <img src={heart} alt="Favorites" className="cursor-pointer" />
-          <img src={cart} alt="Cart" className="cursor-pointer" />
+          <NavLink to="/cart">
+            <img src={cart} alt="Cart" className="cursor-pointer" />
+          </NavLink>
           <button className="bg-[#C0772C] rounded-lg p-2 w-[90px] text-center text-white ml-5">
             Sign In
           </button>

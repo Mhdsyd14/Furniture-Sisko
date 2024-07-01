@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Modern Minimalist Sofa 1",
-    "description": "Sofa nyaman dengan desain modern ",
+    "description": "Sofa nyaman dengan desain modern",
     "price": 12000000,
     "image": "https://i.pinimg.com/564x/58/c5/0c/58c50c8424f1a12fb2a37e587e3bf111.jpg"
   },
@@ -82,5 +82,61 @@
     "description": "Sofa modern dengan desain yang menarik",
     "price": 16500000,
     "image": "https://i.pinimg.com/564x/f3/c8/30/f3c830c4c89896e4ef631aa3df425d2a.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Modern Minimalist Sofa 13",
+    "description": "Sofa minimalis dengan desain nyaman",
+    "price": 11800000,
+    "image": "https://i.pinimg.com/564x/f8/f1/e4/f8f1e47641eed62c374995ad7499935f.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Modern Minimalist Sofa 14",
+    "description": "Sofa kontemporer yang stylish",
+    "price": 14800000,
+    "image": "https://i.pinimg.com/564x/77/23/4d/77234d822642135a76a098f5f53d02ab.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Modern Minimalist Sofa 15",
+    "description": "Sofa dengan aksen minimalis yang menarik",
+    "price": 13200000,
+    "image": "https://i.pinimg.com/564x/43/44/96/4344968bb79833cc3a9b332a9b4f0b26.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Modern Minimalist Sofa 16",
+    "description": "Sofa modern dengan kualitas tinggi",
+    "price": 15500000,
+    "image": "https://i.pinimg.com/564x/2c/9e/7e/2c9e7e964084bc255d690c8ab8d88428.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Modern Minimalist Sofa 17",
+    "description": "Sofa elegan dengan desain minimalis",
+    "price": 14500000,
+    "image": "https://i.pinimg.com/564x/fb/c6/79/fbc679622fda8fe60d435c008f422d49.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Modern Minimalist Sofa 18",
+    "description": "Sofa nyaman dengan sentuhan modern",
+    "price": 12500000,
+    "image": "https://i.pinimg.com/564x/03/e2/0c/03e20c8558be2a9d99f9769d25fa4a67.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Modern Minimalist Sofa 19",
+    "description": "Sofa minimalis dengan bahan berkualitas",
+    "price": 13000000,
+    "image": "https://i.pinimg.com/564x/f1/1c/84/f11c84bc8880ec416db8586415b4d6d6.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Modern Minimalist Sofa 20",
+    "description": "Sofa elegan dengan warna netral",
+    "price": 16000000,
+    "image": "https://i.pinimg.com/564x/44/a5/75/44a57545a1f205b323fac01c949f49fa.jpg"
   }
 ]

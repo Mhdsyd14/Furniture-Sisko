@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import halaman1 from "../../assets/halaman1.png";
+import { NavLink } from "react-router-dom";
 
 const Shipping = () => {
   const [quantity, setQuantity] = useState(1);
@@ -108,12 +109,12 @@ const Shipping = () => {
             <h1 className="text-[#642C0C] font-medium">Total</h1>
             <h1 className=" font-bold text-[#642C0C] ">Rp.125.000</h1>
           </div>
-          <a
-            href="#"
-            className=" rounded-md w-full bg-[#C0772C] mt-5 p-2 text-center text-white font-playfair font-bold"
+          <NavLink
+            to="/payment/method"
+            className="rounded-md w-full bg-[#C0772C] mt-5 p-2 text-center text-white font-playfair font-bold"
           >
             Pay Now
-          </a>
+          </NavLink>
         </div>
       </div>
     </>

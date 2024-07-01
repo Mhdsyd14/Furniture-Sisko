@@ -1,10 +1,16 @@
 import React from "react";
 
-const Filter = ({ totalResults, sortingOptions }) => {
+const Filter = ({
+  totalResults,
+  sortingOptions,
+  currentPage,
+  itemsPerPage,
+  currentResultsCount,
+}) => {
   return (
     <>
       <div className="bg-white p-12 flex flex-row shadow-xl">
-        <div className="text-[#642C0C] flex flex-row gap-5 items-center w-[390px]">
+        <div className="text-[#642C0C] flex flex-row gap-5 items-center w-[410px] ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -34,11 +40,13 @@ const Filter = ({ totalResults, sortingOptions }) => {
               d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
             />
           </svg>
-          Showing 1-{totalResults} of {totalResults} results
+          Showing {(currentPage - 1) * itemsPerPage + 1}-
+          {(currentPage - 1) * itemsPerPage + currentResultsCount} of{" "}
+          {totalResults} results
         </div>
         <div className="flex flex-row gap-5 ml-[490px] text-[#642C0C]  w-[490px]">
           <h1 className="font-bold">Show</h1>
-          <h1>{totalResults}</h1>
+          <h1>{currentResultsCount}</h1>
           <h1 className="font-bold">Sort by</h1>
           <select>
             {sortingOptions.map((option) => (

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import halaman1 from "../../assets/halaman1.png";
 
 const Checkout = () => {
@@ -64,12 +65,12 @@ const Checkout = () => {
           <h1 className="font-bold">Total</h1>
           <h1 className="font-bold ml-auto text-2xl">Rp.1.250.000</h1>
         </div>
-        <a
-          href=""
+        <NavLink
+          to="/payment"
           className="rounded-lg bg-[#C0772C] p-3 mt-5 text-white font-playfair font-bold text-center"
         >
           Continue To Payment
-        </a>
+        </NavLink>
       </div>
     </div>
   );

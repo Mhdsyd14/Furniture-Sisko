@@ -6,7 +6,7 @@ const Order = () => {
       <div className="flex flex-col p-8">
         <div className="ml-10">
           <h1 className="text-3xl font-playfair font-bold">Payment</h1>
-          <h1 className="mt-4">1 From 2 Step</h1>
+          <h1 className="mt-4">2 From 2 Step</h1>
           <div className="flex flex-row">
             <div className="flex flex-col">
               <div className="h-1 w-[290px] bg-[#C0772C] mt-4" />
