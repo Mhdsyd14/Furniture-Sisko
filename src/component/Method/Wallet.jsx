@@ -10,11 +10,18 @@ import ovo from "../../assets/icons/ovo.png";
 import permata from "../../assets/icons/permata.png";
 import shopee from "../../assets/icons/shopee.png";
 
-const Wallet = () => {
+const Wallet = ({ subtotal, shippingCost, total }) => {
   const [selectedOption, setSelectedOption] = useState("");
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.id);
+  };
+
+  const formatRupiah = (number) => {
+    return number.toLocaleString("id-ID", {
+      style: "currency",
+      currency: "IDR",
+    });
   };
 
   return (
@@ -290,16 +297,18 @@ const Wallet = () => {
           <div className=" h-[2px] w-[390px] mt-3 bg-[#642C0C] opacity-10"></div>
           <div className=" flex flex-row mt-6 gap-[210px]">
             <h1 className="text-[#642C0C] font-medium">Subtotal</h1>
-            <h1>Rp.125.000</h1>
+            <h1>{formatRupiah(subtotal)}</h1>
           </div>
           <div className=" flex flex-row mt-2 gap-[170px]">
             <h1 className="text-[#642C0C] font-medium">Shipping Cost</h1>
-            <h1>Rp.125.000</h1>
+            <h1>{formatRupiah(shippingCost)}</h1>
           </div>
           <div className=" h-[2px] w-[390px] mt-5 bg-[#642C0C] opacity-10"></div>
           <div className=" flex flex-row mt-2 gap-[230px]">
             <h1 className="text-[#642C0C] font-medium">Total</h1>
-            <h1 className=" font-bold text-[#642C0C] ">Rp.125.000</h1>
+            <h1 className=" font-bold text-[#642C0C] ">
+              {formatRupiah(total)}
+            </h1>
           </div>
           <a
             href="#"
